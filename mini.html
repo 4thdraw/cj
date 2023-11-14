@@ -1,0 +1,308 @@
+<!--@import(/moa/import/banner_manager.html)-->
+<script>
+    script.onload = function () {
+
+        var scrollIdx = -1;
+        var runMainBannerSlidePC, runMainBannerSlideMobile, runSubBannerSlide, runPrdSlide, runPrdSlide7 = undefined;
+        var flag = false;
+        var instaFlag = false;
+
+        //추가분
+        var swiperPopup, poppagingSwiper, bestReviewSwiper, tabBanner = undefined;
+
+
+     
+        var repeat = setInterval(function () {
+
+            if (window.jQuery) {
+
+                clearInterval(repeat);
+
+                $(function () {
+
+
+
+                    var screenWidth = $(window).width();
+
+
+
+          
+                    //탭첫번째활성화
+                    //탭배너 페이드 자동기능 스와이퍼 버전 5로 낮춘이유
+
+                    //탭 배너 아래 메인상품들
+                    const tabsSWiper0 = new Swiper('.tabContentBox0 .swiper', {
+
+                        slidesPerView: 2.2,
+                        spaceBetween: 16,
+                        observer: true,	// 추가
+                        observeParents: true,	// 추가
+                        // autoplay: {
+                        // delay: 3000,
+                        // disableOnInteraction: false,
+                        // }, 
+                        scrollbar: {
+                            el: '.tabContentBox0 .swiper .swiper-scrollbar',
+                        },
+
+
+                        breakpoints: {
+                            768: {
+                                slidesPerView: 3,
+                                spaceBetween: 16,
+                            },
+                            1151: {
+                                slidesPerView: 4,
+                                spaceBetween: 16,
+                            },
+                            // 1028: {
+                            //     slidesPerView: 5,
+                            //     spaceBetween: 16,
+                            //     allowTouchMove: false
+                            // },
+                            1280: {
+                                slidesPerView: 5,
+                                spaceBetween: 15,
+                                allowTouchMove: false
+                            },
+                        },
+
+                    })
+                    const tabsSWiper1 = new Swiper('.tabContentBox1 .swiper', {
+
+                        slidesPerView: 2.2,
+                        spaceBetween: 16,
+                        observer: true,	// 추가
+                        observeParents: true,	// 추가 
+                        // autoplay: {
+                        // delay: 3000,
+                        // disableOnInteraction: false,
+                        // }, 
+                        scrollbar: {
+                            el: '.tabContentBox1 .swiper .swiper-scrollbar',
+                        },
+
+                        breakpoints: {
+                            768: {
+                                slidesPerView: 3,
+                                spaceBetween: 16,
+                            },
+                            1151: {
+                                slidesPerView: 4,
+                                spaceBetween: 16,
+                            },
+                            // 1151: {
+                            //     slidesPerView: 5,
+                            //     spaceBetween: 16,
+                            //     allowTouchMove: false
+                            // },
+                            1280: {
+                                slidesPerView: 5,
+                                spaceBetween: 15,
+                                allowTouchMove: false
+                            },
+                        },
+
+                    })
+                    const tabsSWiper2 = new Swiper('.tabContentBox2 .swiper', {
+
+                        slidesPerView: 2.2,
+                        spaceBetween: 16,
+                        observer: true,	// 추가
+                        observeParents: true,	// 추가
+                        // autoplay: {
+                        // delay: 3000,
+                        // disableOnInteraction: false,
+                        // }, 
+                        scrollbar: {
+                            el: '.tabContentBox2 .swiper .swiper-scrollbar',
+                        },
+
+                        breakpoints: {
+                            768: {
+                                slidesPerView: 3,
+                                spaceBetween: 16,
+                            },
+                            1151: {
+                                slidesPerView: 4,
+                                spaceBetween: 16,
+                            },
+                            // 1028: {
+                            //     slidesPerView: 5,
+                            //     spaceBetween: 16,
+                            //     allowTouchMove: false
+                            // },
+                            1280: {
+                                slidesPerView: 5,
+                                spaceBetween: 15,
+                                allowTouchMove: false
+                            },
+                        },
+
+                    })
+                    const tabsSWiper3 = new Swiper('.tabContentBox3 .swiper', {
+                        slidesPerView: 2.2,
+                        spaceBetween: 16,
+                        observer: true,	// 추가
+                        observeParents: true,	// 추가
+                        // autoplay: {
+                        // delay: 3000,
+                        // disableOnInteraction: false,
+                        // }, 
+                        scrollbar: {
+                            el: '.tabContentBox3 .swiper .swiper-scrollbar',
+                        },
+
+                        breakpoints: {
+                            768: {
+                                slidesPerView: 3,
+                                spaceBetween: 16,
+                            },
+                            1151: {
+                                slidesPerView: 4,
+                                spaceBetween: 16,
+                            },
+                            // 1028: {
+                            //     slidesPerView: 5,
+                            //     spaceBetween: 16,
+                            //     allowTouchMove: false
+                            // },
+                            1280: {
+                                slidesPerView: 5,
+                                spaceBetween: 15,
+                                allowTouchMove: false
+                            },
+                        },
+
+                    })
+
+                    const tabsSWiper4 = new Swiper('.tabContentBox4 .swiper', {
+
+                        slidesPerView: 2.2,
+                        spaceBetween: 16,
+                        observer: true,	// 추가
+                        observeParents: true,	// 추가 
+                        // autoplay: {
+                        // delay: 3000,
+                        // disableOnInteraction: false,
+                        // }, 
+                        scrollbar: {
+                            el: '.tabContentBox4 .swiper .swiper-scrollbar',
+                        },
+
+                        breakpoints: {
+                            768: {
+                                slidesPerView: 3,
+                                spaceBetween: 16,
+                            },
+                            1151: {
+                                slidesPerView: 4,
+                                spaceBetween: 16,
+                            },
+                            // 1028: {
+                            //     slidesPerView: 5,
+                            //     spaceBetween: 16,
+                            //     allowTouchMove: false
+                            // },
+                            1280: {
+                                slidesPerView: 5,
+                                spaceBetween: 15,
+                                allowTouchMove: false
+                            },
+                        },
+
+                    })
+
+
+                    tabBanner = new Swiper('.tab-p-swiper', {
+                        loop: true,
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+
+                        effect: 'fade',
+                        pagination: {
+                            el: '.tabNm.swiper-pagination',
+                            clickable: true,
+                            //  dynamicBullets: true,
+                            renderBullet: function (index, className) {
+                                return '<li class="tab-title__item py-2 px-2 px-md-0  relative tab-item' + index + ' ' + className + '">' + $('.tab-title-list-pc > li').eq(index).html() + '</li>';
+                            },
+                        },
+                        observer: true,	// 추가
+                        observeParents: true,	// 추가
+
+
+                        autoplay: { //중요!!!!! effect  fade 자동처리가 안되다가  
+                            // swiper버전 5.4.5로 수정한 후에 제대로 됨  // 23년 9버전에서는 됨
+                            delay: 3500,
+                            disableOnInteraction: false,
+                        },
+                        on: {
+                            realIndexChange: function () {
+                                //배너 스와이퍼시 콘솔에 순서대로 잘 찍힘
+                                console.log(this.realIndex)
+                                // if( this.activeIndex == 6 || this.activeIndex == 2 ){
+                                //     $('.tabNm.swiper-pagination').css({ 'marginLeft': 0 })   
+                                // }
+                                // if(this.activeIndex == 3){
+                                //     $('.tabNm.swiper-pagination').css({ 'marginLeft': "-20vw"  })  
+                                // } 
+                                // if(this.activeIndex >= 4){
+                                //     $('.tabNm.swiper-pagination').css({ 'marginLeft': "-45vw"  })  
+                                // }
+                                if ($(window).width() < 620) {
+
+                                    if (this.realIndex >= 3) {
+                                        $('.tabNm.swiper-pagination').animate({ scrollLeft: $('.tabNm.swiper-pagination').width() }, 300)
+
+                                    }
+                                    if (this.realIndex == 2) {
+                                        console.log($('.tabNm.swiper-pagination').scrollLeft())
+                                        // $('.tabNm.swiper-pagination').scrollLeft($('.tabNm.swiper-pagination li').eq(2).width())  
+                                        $('.tabNm.swiper-pagination').animate({ scrollLeft: $('.tabNm.swiper-pagination li').eq(2).width() }, 300)
+
+                                    }
+                                    if (this.realIndex <= 1) {
+                                        $('.tabNm.swiper-pagination').animate({ scrollLeft: 0 }, 300)
+
+                                    }
+                                }
+
+                                $('.tabContents li.tabContentBox').eq(this.realIndex).addClass('show').siblings().removeClass('show');
+
+
+                            },
+                            click: function () {
+
+
+                            },
+
+                            slideChangeTransitionStart: function () {
+
+                                //절대 디블럭 클래스 사용하지 말것 (아래 컨텐츠들이 덜컹거리는 현상이 일어남 안정적인 ui구현이 안됨)
+
+
+
+
+
+                            }
+                        }
+                    });
+                    $('.tabNm  .tab-item' + 0).addClass('on  acidentagain510');
+
+
+
+
+
+
+               
+                });
+
+
+               
+            }
+
+        });
+
+    }////onload
+</script>

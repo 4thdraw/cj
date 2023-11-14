@@ -41,6 +41,7 @@
     align-items: center;
     display: flex;
 }
+
 #mainBanner .swiper-pagination-bullet {
     border-radius: 0;
     width: 3rem;
@@ -49,6 +50,7 @@
     margin: 0;
     position: relative;
 }
+
 .swiper-pagination-bullet:before {
     content: "";
     display: block;
@@ -61,9 +63,11 @@
     margin: auto;
     background-color: white;
 }
+
 #mainBanner .swiper-pagination-bullet-active {
     background-color: transparent;
 }
+
 #mainBanner .swiper-pagination-bullet-active:before {
     height: 3px;
 }
@@ -82,4 +86,43 @@
 
 .bg3 {
     background-image: url(https://www.cj.co.kr/cj_files/main/visual/202308/1692251347164_0.jpg);
+}
+
+.toggle {
+    background-color: transparent;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.2em;
+}
+
+#mainBanner .toggle.on:before {
+    content: "\F4F5";
+}
+
+/*11번가 상위객체의 배경색 바꾸기*/
+#mainBanner {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.realIndex0 {
+    background-color: red;
+}
+
+.realIndex1 {
+    background-color: orange;
+}
+
+.realIndex2 {
+    background-color: yellow;
+}
+
+.realIndex3 {
+    background-color: green;
+}
+
+.realIndex4 {
+    background-color: blue;
 }
